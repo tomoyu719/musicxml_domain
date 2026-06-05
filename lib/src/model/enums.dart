@@ -1,5 +1,4 @@
 // All enum definitions for the project in one file per requirement spec.
-// ignore_for_file: one_class_per_file
 
 /// Pitch step (A–G).
 enum Step {
@@ -528,6 +527,31 @@ enum PartSymbolType {
   square('square');
 
   const PartSymbolType(this.value);
+
+  /// MusicXML string representation.
+  final String value;
+}
+
+/// Tied notation type (notation-level; broader than note-level TieType).
+enum TiedType {
+  start('start'),
+  stop('stop'),
+  continueValue('continue'),
+  letRing('let-ring');
+
+  const TiedType(this.value);
+
+  /// MusicXML string representation.
+  final String value;
+}
+
+/// Controls what is shown on a tuplet bracket (show-number / show-type).
+enum ShowTuplet {
+  actual('actual'),
+  both('both'),
+  none('none');
+
+  const ShowTuplet(this.value);
 
   /// MusicXML string representation.
   final String value;
