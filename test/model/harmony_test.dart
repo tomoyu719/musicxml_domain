@@ -15,7 +15,7 @@ void main() {
       expect(base, const HarmonyRoot(step: Step.c));
       expect(base == const HarmonyRoot(step: Step.g), isFalse);
       expect(
-        base == const HarmonyRoot(step: Step.c, alter: 1.0),
+        base == const HarmonyRoot(step: Step.c, alter: 1),
         isFalse,
       );
     });
@@ -30,8 +30,8 @@ void main() {
         const HarmonyRoot(step: Step.f),
       );
       expect(
-        base.copyWith(alter: -1.0),
-        const HarmonyRoot(step: Step.c, alter: -1.0),
+        base.copyWith(alter: -1),
+        const HarmonyRoot(step: Step.c, alter: -1),
       );
     });
   });
@@ -101,7 +101,7 @@ void main() {
   group('HarmonyDegree', () {
     const base = HarmonyDegree(
       degreeValue: 7,
-      degreeAlter: 0.0,
+      degreeAlter: 0,
       degreeType: DegreeType.add,
     );
 
@@ -110,7 +110,7 @@ void main() {
         base,
         const HarmonyDegree(
           degreeValue: 7,
-          degreeAlter: 0.0,
+          degreeAlter: 0,
           degreeType: DegreeType.add,
         ),
       );
@@ -118,7 +118,7 @@ void main() {
         base ==
             const HarmonyDegree(
               degreeValue: 9,
-              degreeAlter: 0.0,
+              degreeAlter: 0,
               degreeType: DegreeType.add,
             ),
         isFalse,
@@ -127,7 +127,7 @@ void main() {
         base ==
             const HarmonyDegree(
               degreeValue: 7,
-              degreeAlter: -1.0,
+              degreeAlter: -1,
               degreeType: DegreeType.add,
             ),
         isFalse,
@@ -136,7 +136,7 @@ void main() {
         base ==
             const HarmonyDegree(
               degreeValue: 7,
-              degreeAlter: 0.0,
+              degreeAlter: 0,
               degreeType: DegreeType.alter,
             ),
         isFalse,
@@ -148,7 +148,7 @@ void main() {
         base.hashCode,
         const HarmonyDegree(
           degreeValue: 7,
-          degreeAlter: 0.0,
+          degreeAlter: 0,
           degreeType: DegreeType.add,
         ).hashCode,
       );
@@ -159,15 +159,15 @@ void main() {
         base.copyWith(degreeValue: 9),
         const HarmonyDegree(
           degreeValue: 9,
-          degreeAlter: 0.0,
+          degreeAlter: 0,
           degreeType: DegreeType.add,
         ),
       );
       expect(
-        base.copyWith(degreeAlter: -1.0),
+        base.copyWith(degreeAlter: -1),
         const HarmonyDegree(
           degreeValue: 7,
-          degreeAlter: -1.0,
+          degreeAlter: -1,
           degreeType: DegreeType.add,
         ),
       );
@@ -175,7 +175,7 @@ void main() {
         base.copyWith(degreeType: DegreeType.subtract),
         const HarmonyDegree(
           degreeValue: 7,
-          degreeAlter: 0.0,
+          degreeAlter: 0,
           degreeType: DegreeType.subtract,
         ),
       );
@@ -189,7 +189,7 @@ void main() {
     const kind = HarmonyKind(value: HarmonyKindValue.major);
     const base = Harmony(root: root, kind: kind);
 
-    test('defaults bass, inversion, offset, staff, type to null and degrees to []', () {
+    test('defaults optional fields to null and degrees to empty list', () {
       expect(base.bass, isNull);
       expect(base.inversion, isNull);
       expect(base.offset, isNull);
@@ -221,7 +221,7 @@ void main() {
     test('equality uses list contents for degrees', () {
       const deg = HarmonyDegree(
         degreeValue: 7,
-        degreeAlter: 0.0,
+        degreeAlter: 0,
         degreeType: DegreeType.add,
       );
       const a = Harmony(root: root, kind: kind, degrees: [deg]);

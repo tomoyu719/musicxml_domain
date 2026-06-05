@@ -158,7 +158,7 @@ void main() {
       expect(
         base ==
             const NonTraditionalKey(
-              alterations: [KeyAlteration(step: Step.c, alter: 1.0)],
+              alterations: [KeyAlteration(step: Step.c, alter: 1)],
             ),
         isFalse,
       );
@@ -167,10 +167,10 @@ void main() {
 
     test('equality uses list contents for alterations', () {
       const a = NonTraditionalKey(
-        alterations: [KeyAlteration(step: Step.f, alter: -1.0)],
+        alterations: [KeyAlteration(step: Step.f, alter: -1)],
       );
       const b = NonTraditionalKey(
-        alterations: [KeyAlteration(step: Step.f, alter: -1.0)],
+        alterations: [KeyAlteration(step: Step.f, alter: -1)],
       );
       expect(a, b);
       expect(a == base, isFalse);

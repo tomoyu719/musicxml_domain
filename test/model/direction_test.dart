@@ -41,7 +41,10 @@ void main() {
     });
 
     test('equality matches all fields', () {
-      expect(base, const Metronome(beatUnit: NoteType.quarter, perMinute: '120'));
+      expect(
+        base,
+        const Metronome(beatUnit: NoteType.quarter, perMinute: '120'),
+      );
       expect(
         base == const Metronome(beatUnit: NoteType.half, perMinute: '120'),
         isFalse,
@@ -121,8 +124,8 @@ void main() {
         const Wedge(type: WedgeType.crescendo, number: 1),
       );
       expect(
-        base.copyWith(spread: 15.0),
-        const Wedge(type: WedgeType.crescendo, spread: 15.0),
+        base.copyWith(spread: 15),
+        const Wedge(type: WedgeType.crescendo, spread: 15),
       );
     });
   });
