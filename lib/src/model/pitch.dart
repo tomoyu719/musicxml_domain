@@ -1,10 +1,5 @@
-// Pitch and DisplayPitch are tightly coupled; colocated intentionally.
-// ignore_for_file: one_class_per_file
-
 import 'package:musicxml_domain/src/model/enums.dart';
 
-/// A pitched note's frequency specification
-/// (step, octave, optional alteration).
 final class Pitch {
   const Pitch({
     required this.step,
@@ -38,35 +33,4 @@ final class Pitch {
 
   @override
   int get hashCode => Object.hash(step, octave, alter);
-}
-
-/// Display pitch for unpitched notes (step and octave, no alteration).
-final class DisplayPitch {
-  const DisplayPitch({
-    required this.displayStep,
-    required this.displayOctave,
-  });
-
-  final Step displayStep;
-  final int displayOctave;
-
-  DisplayPitch copyWith({
-    Step? displayStep,
-    int? displayOctave,
-  }) =>
-      DisplayPitch(
-        displayStep: displayStep ?? this.displayStep,
-        displayOctave: displayOctave ?? this.displayOctave,
-      );
-
-  @override
-  bool operator ==(Object other) =>
-      identical(this, other) ||
-      other is DisplayPitch &&
-          runtimeType == other.runtimeType &&
-          displayStep == other.displayStep &&
-          displayOctave == other.displayOctave;
-
-  @override
-  int get hashCode => Object.hash(displayStep, displayOctave);
 }

@@ -1,5 +1,4 @@
 // All enum definitions for the project in one file per requirement spec.
-// ignore_for_file: one_class_per_file
 
 /// Pitch step (A–G).
 enum Step {
