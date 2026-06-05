@@ -1,3 +1,0 @@
-class Score {
-  const Score();
-}

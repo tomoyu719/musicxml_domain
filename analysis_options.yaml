@@ -5,3 +5,11 @@ analyzer:
     - tools/**
   plugins:
     - custom_lint
+
+linter:
+  rules:
+    # Disabled: internal library files; API docs added in a later phase.
+    public_member_api_docs: false
+    # Disabled: all model fields are final; @immutable omitted to avoid
+    # adding a meta dependency.
+    avoid_equals_and_hash_code_on_mutable_classes: false

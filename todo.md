@@ -2,14 +2,14 @@
 
 ## Phase 1: 基盤・コア値オブジェクト
 
-- [ ] `pubspec.yaml` セットアップ（`xml` パッケージ依存追加）
-- [ ] `lib/src/model/enums.dart` — 全 enum 定義
-  - [ ] Step, NoteType, AccidentalType, StemDirection, BeamType
-  - [ ] ClefSign, KeyMode, NoteheadType, Syllabic, BarStyle
-  - [ ] HarmonyKindValue, DynamicsType, その他
-- [ ] `lib/src/model/pitch.dart` — `Pitch`, `DisplayPitch`
-- [ ] `lib/src/model/lyric.dart` — `LyricContent` (sealed), `Lyric`
-- [ ] Phase 1 ユニットテスト（==, hashCode, copyWith）
+- [x] `pubspec.yaml` セットアップ（`xml` パッケージ依存追加）
+- [x] `lib/src/model/enums.dart` — 全 enum 定義
+  - [x] Step, NoteType, AccidentalType, StemDirection, BeamType
+  - [x] ClefSign, KeyMode, NoteheadType, Syllabic, BarStyle
+  - [x] HarmonyKindValue, DynamicsType, その他
+- [x] `lib/src/model/pitch.dart` — `Pitch`, `DisplayPitch`
+- [x] `lib/src/model/lyric.dart` — `LyricContent` (sealed), `Lyric`
+- [x] Phase 1 ユニットテスト（==, hashCode, copyWith）
 
 ## Phase 2: 音符モデル
 
