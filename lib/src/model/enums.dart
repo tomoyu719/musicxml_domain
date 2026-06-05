@@ -556,3 +556,30 @@ enum ShowTuplet {
   /// MusicXML string representation.
   final String value;
 }
+
+/// Time signature symbol type.
+enum TimeSymbol {
+  common('common'),
+  cut('cut'),
+  singleNumber('single-number'),
+  note('note'),
+  dottedNote('dotted-note'),
+  normal('normal');
+
+  const TimeSymbol(this.value);
+
+  /// MusicXML string representation.
+  final String value;
+}
+
+/// Start, stop, or discontinue.
+enum StartStopDiscontinue {
+  start('start'),
+  stop('stop'),
+  discontinue('discontinue');
+
+  const StartStopDiscontinue(this.value);
+
+  /// MusicXML string representation.
+  final String value;
+}
