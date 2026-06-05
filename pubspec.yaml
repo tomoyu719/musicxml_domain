@@ -8,6 +8,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  collection: ^1.19.0
   xml: ^6.0.0
 
 dev_dependencies:
